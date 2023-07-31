@@ -1,0 +1,28 @@
+<h4>Add Employee Type</h4>
+<hr>
+<div class="container">
+  <div class="row">  
+    <form [formGroup]="employeetypeForm" class="form-horizontal" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label class="col-sm-1" for="employeeTypeName">Name:</label>
+        <div class="col-sm-6">
+          <input class="form-control" id="employeeTypeName" placeholder="Enter name" [required]="true" formControlName="employeeTypeName">
+        </div>
+      </div>
+       
+      <div class="form-group">
+        <label class="col-sm-1" for="employeeTypeDescription">Description:</label>
+        <div class="col-sm-6">
+          <textarea class="form-control" id="employeeTypeDescription" placeholder="Enter description" [required]="true" formControlName="employeeTypeDescription"></textarea>
+        </div>
+      </div>
+     
+      <div class="form-group">
+        <div class="col-sm-offset-1 col-sm-6">
+          <button style="margin-right: 1em;" type="submit" [disabled]="!employeetypeForm.valid" class="btn btn-sm btn-default">Submit</button>
+          <button type="button" class="btn btn-sm btn-warning" (click)="cancel()">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

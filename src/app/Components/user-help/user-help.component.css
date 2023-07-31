@@ -1,0 +1,155 @@
+.heading {
+    background-color: #075c86;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+ 
+  .table-container {
+    overflow-x: auto;
+  }
+ 
+  .table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+  }
+ 
+  .table-heading {
+    background-color: #075c86;
+    color: white;
+    text-align: center;
+    border: 1px solid black;
+  }
+ 
+  .table-cell {
+    padding: 10px;
+    border: 1px solid black;
+  }
+ 
+  .table-icons {
+    text-align: center;
+  }
+ 
+  .edit-icon,
+  .delete-icon,
+  .download-icon {
+    color: #075c86;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+ 
+  .table-row {
+    border: 1px solid black;
+    border-top: none; /* Remove top border from all rows */
+  }
+ 
+  .table-row:first-child {
+    border-top: 1px solid black; /* Add top border for the first row to separate from the table header */
+  }
+ 
+  .actions {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+ 
+  .add-button {
+    background-color: #075c86;
+    color: white;
+  }
+  /* Main Styles */
+  .heading {
+    background-color: #075c86;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+ 
+  .table-container {
+    overflow-x: auto;
+  }
+ 
+  .table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+  }
+ 
+  .table-heading {
+    background-color: #075c86;
+    color: white;
+    text-align: center;
+    border: 1px solid black;
+  }
+ 
+  .table-cell {
+    padding: 10px;
+    border: 1px solid black;
+  }
+ 
+  .table-icons {
+    text-align: center;
+  }
+ 
+  .edit-icon,
+  .delete-icon,
+  .download-icon {
+    color: #075c86;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+ 
+  .table-row {
+    border: 1px solid black;
+    border-top: none; /* Remove top border from all rows */
+  }
+ 
+  .table-row:first-child {
+    border-top: 1px solid black; /* Add top border for the first row to separate from the table header */
+  }
+ 
+  .actions {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+ 
+  .add-button {
+    background-color: #075c86;
+    color: white;
+  }
+  .actions {
+    display: flex; /* Display the elements inside .actions div in a flexbox layout */
+    justify-content: space-between; /* Space out the elements in the flexbox layout */
+    align-items: center; /* Center the items vertically within the .actions div */
+    margin-bottom: 20px;
+  }
+ 
+  .add-button {
+    background-color: #075c86;
+    color: white;
+  }
+ 
+  /* Add new styles for the search input and button */
+ 
+  .search-container {
+    display: flex; /* Display the search input and button in a flexbox layout */
+    align-items: center; /* Center the items vertically within .search-container */
+  }
+ 
+  .search-container input[type="text"] {
+    margin-right: 10px; /* Add some space between the input and button */
+    padding: 6px 8px; /* Adjust padding for the input */
+    border: 1px solid #ccc; /* Add a border to the input */
+    border-radius: 4px; /* Rounded corners for the input */
+  }
+ 
+  .search-button {
+    background-color: #075c86;
+    color: white;
+    border: none;
+    padding: 6px 10px; /* Adjust padding for the button */
+    border-radius: 4px; /* Rounded corners for the button */
+    cursor: pointer;
+  }

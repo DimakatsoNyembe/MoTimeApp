@@ -1,0 +1,74 @@
+<div class="container">
+    <h2>Edit Employee</h2>
+<form  (submit)="onSubmit()">
+   
+<div class="form-group">
+  <label for="userId">User:</label>
+  <select class="form-control" id="userId" [(ngModel)]="eemployee.userId" name="userId">
+    <option *ngFor="let userId of users" [value]="userId.userId">{{ userId.firstName }}</option>
+  </select>
+</div>
+
+
+
+
+<div class="form-group">
+  <label for="resourceId">Resource:</label>
+  <select class="form-control" id="resourceId" [(ngModel)]="eemployee.resourceId" name="resourceId" required>
+    <option *ngFor="let resourceId of resources" [ngValue]="resourceId.resourceId">{{ resourceId.resourceName }}</option>
+  </select>
+</div>
+
+
+
+
+<div class="form-group">
+  <label for="employeetypeId">Employee Type:</label>
+  <select class="form-control" id="employeeTypeId" [(ngModel)]="eemployee.employeeTypeId" name="employeeTypeId" required>
+    <option *ngFor="let typeId of employeeTypes" [ngValue]="typeId.employeeTypeId">{{ typeId.employeeTypeName }}</option>
+  </select>
+</div>
+
+
+
+
+<div class="form-group">
+  <label for="employeeStatusId">Employee Status:</label>
+  <select class="form-control" id="employeeStatusId" [(ngModel)]="eemployee.employeeStatusId" name="employeeStatusId" required>
+    <option *ngFor="let status of employeeStatuses" [ngValue]="status.employeeStatusId">{{ status.employeeStatusName }}</option>
+  </select>
+</div>
+
+
+<div class="form-group">
+  <label for="regionId">Region:</label>
+  <select class="form-control" id="regionId" [(ngModel)]="eemployee.regionId" name="regionId" required>
+    <option *ngFor="let region of regions" [ngValue]="region.regionId">{{ region.regionName }}</option>
+  </select>
+</div>
+
+
+
+
+<div class="form-group">
+  <label for="divisionId">Division:</label>
+  <select class="form-control" id="divisionId" [(ngModel)]="eemployee.divisionId" name="divisionId" required>
+    <option *ngFor="let division of divisions" [ngValue]="division.divisionId">{{ division.divisionName }}</option>
+  </select>
+</div>
+
+
+<div class="form-group">
+  <label for="managertypeId">Manager Type:</label>
+  <select class="form-control" id="managerTypeId" [(ngModel)]="eemployee.managerTypeId" name="managerTypeId">
+    <option *ngFor="let managerType of managerTypes" [ngValue]="managerType.managerTypeId">{{ managerType.managerTypeName }}</option>
+  </select>
+</div>
+
+
+<!-- <button type="submit" class="btn btn-primary" [disabled]="!areDropdownsSelected()">Confirm</button> -->
+<button type="submit" class="btn btn-primary">Update Employee</button>
+<button type="button" class="btn btn-sm btn-warning" (click)="cancel()">Cancel</button>
+
+
+</form>

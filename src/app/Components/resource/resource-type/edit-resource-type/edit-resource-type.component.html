@@ -1,0 +1,22 @@
+<div class="bg-blue">
+    <h4 class="text-white py-2">Update Resource Type</h4>
+  </div>
+  
+  
+  <div>
+    <label for="resourceTypeName">Resource Name:</label>
+    <input type="text" id="resourceTypeName" [(ngModel)]="resourceTypeName">
+  </div>
+  
+  
+  <div>
+    <label for="resourceDescription">Resource Description:</label>
+    <textarea id="resourceDescription" [(ngModel)]="resourceTypeDescription"></textarea>
+  </div>
+  
+  
+  <div>
+    <button type="button" class="btn btn-primary" (click)="onSubmit()">Update</button>
+    <button type="button" class="btn btn-secondary"(click)="cancel()">Cancel</button>
+  </div>
+  

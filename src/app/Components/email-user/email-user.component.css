@@ -1,0 +1,73 @@
+.selected-employee-heading {
+    background-color: #075c86;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: 10px; /* Adjusted margin to match spacing */
+    font-size: 16px; /* Set the font size for both headings */
+  }
+  .heading {
+    background-color: #075c86;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  /* Table style */
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  
+  .table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  
+  .table-heading-row th {
+    border: none; /* Remove borders for table heading */
+    background-color: #075c86;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  
+  .table-cell {
+    padding: 10px;
+    border: 1px solid #075c86;
+  }
+  
+  
+  /* Remove borders for table data */
+  .table-cell-no-border {
+    padding: 10px;
+    border: none;
+  }
+  
+  
+  /* Button style */
+  .launch-outlook-button {
+    background-color: #075c86;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 20px;
+  }
+  
+  
+  .launch-outlook-button:hover {
+    background-color: #064c72;
+  }
+  
+
+  /* Adjust spacing for selected employees section */
+  .selected-employee-list {
+    margin-top: 20px;
+  }
+  

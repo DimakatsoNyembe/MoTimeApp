@@ -1,0 +1,34 @@
+<div class="bg-blue">
+    <h4 class="text-white py-2">Edit Help</h4>
+  </div>
+
+
+<div>
+    <label for="helpName">Help Name:</label>
+    <input type="text" id="helpName" [(ngModel)]="helpName">
+  </div>
+ 
+  <div>
+    <label for="helpDescription">Help Description:</label>
+    <textarea id="helpDescription" [(ngModel)]="helpDescription"></textarea>
+  </div>
+ 
+  <div>
+    <label for="helpType">Help Type:</label>
+    <select id="helpType" [(ngModel)]="helpType">
+      <option *ngFor="let helpType of helpTypes" [value]="helpType.helpTypeId">
+        {{ helpType.helpTypeName }}
+      </option>
+    </select>
+  </div>
+ 
+  <div>
+    <label for="material">Upload File:</label>
+    <input type="file" id="material" (change)="onFileChange($event)">
+  </div>
+ 
+  <div>
+    <button type="button" (click)="onSubmit()">Update</button>
+    <button type="button" (click)="cancel()">Cancel</button>
+  </div>
+ 

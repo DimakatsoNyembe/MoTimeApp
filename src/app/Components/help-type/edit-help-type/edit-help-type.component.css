@@ -1,0 +1,56 @@
+.bg-blue {
+    background-color: hsl(200, 90%, 28%);
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  
+  .text-white {
+    color: white;
+  }
+  
+  
+  .btn-primary {
+    background-color: #075c86;
+    color: white;
+  }
+  
+  
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: #0c7294;
+    color: white;
+  }
+  
+  
+  .btn-secondary {
+    background-color: #075c86;
+    color: white;
+  }
+  
+  
+  .btn-secondary:hover,
+  .btn-secondary:focus {
+    background-color: #0c7294;
+    color: white;
+  }
+  
+  
+  .container {
+    margin-top: 20px;
+  }
+  
+  
+  .form-horizontal .form-group {
+    margin-bottom: 20px;
+  }
+  
+  
+  .form-horizontal .form-group label {
+    display: block;
+  }
+  .form-horizontal .form-group .btn {
+    margin-right: 10px;
+  }
+  

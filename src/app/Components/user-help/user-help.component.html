@@ -1,0 +1,40 @@
+<div class="heading">
+    <h1>Help</h1>
+  </div>
+  <div class="actions">
+    <div class="search-container">
+      <input type="text" [(ngModel)]="searchQuery" placeholder="Search helps">
+      <button (click)="searchHelps()" class="search-button">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
+  <div *ngIf="helps.length > 0">
+    <!-- Display the list of help -->
+  </div>
+  <div *ngIf="helps.length === 0">
+    No helps found.
+  </div>
+ 
+  <div class="table-container">
+    <table class="table">
+      <tr class="table-heading">
+        <th class="table-cell">Help Name</th>
+        <th class="table-cell">Help Description</th>
+        <th class="table-cell">Help Type</th>
+        <th class="table-cell">File Name</th>
+        <th class="table-cell">Actions</th>
+      </tr>
+      <tr *ngFor="let help of helps" class="table-row">
+        <td class="table-cell">{{ help.helpName }}</td>
+        <td class="table-cell">{{ help.helpDescription }}</td>
+        <td class="table-cell">{{ help.helpTypeName }}</td>
+        <td class="table-cell">{{ help.fileName }}</td>
+        <td class="table-cell table-icons">
+     
+          <i class="fa fa-download download-icon" (click)="downloadHelp(help)"></i>
+     
+        </td>
+      </tr>
+    </table>
+  </div>

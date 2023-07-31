@@ -1,0 +1,40 @@
+<div class="heading">
+    <h1>Resources</h1>
+  </div>
+
+  <div class="actions">
+    <button type="button" class="btn btn-sm btn-primary add-button" routerLink="/add-resource">
+      <i class="fa fa-plus"></i>
+    </button>
+  </div>
+
+  <div class="form-group">
+    <input type="text" [(ngModel)]="searchName" placeholder="Search by name" class="form-control">
+    <button type="button" class="btn btn-primary" (click)="search()">Search</button>
+  </div>
+  
+  
+  
+  <div  class="table-container">
+    <table class="table">
+      <tr class="table-heading">
+        <th class="table-cell">Resource Name</th>
+        <th class="table-cell">Resource Description</th>
+        <th class="table-cell">Resource Type</th>
+        <th class="table-cell">Actions</th>
+      </tr>
+      <tr *ngFor="let resource of resources" class="table-row">
+        <td class="table-cell">{{ resource.resourceName }}</td>
+        <td class="table-cell">{{ resource.resourceDescription }}</td>
+        <td class="table-cell">{{ resource.resourceTypeName }}</td>
+        <td class="table-cell table-icons">
+          <i class="fa fa-edit edit-icon" (click)="editResource(resource.resourceId)"></i>
+          <i class="fa fa-trash delete-icon" (click)="DeleteResource(resource.resourceId)"></i>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  
+<!-- <div *ngIf="filtered.length === 0">No items found.</div> -->
+  

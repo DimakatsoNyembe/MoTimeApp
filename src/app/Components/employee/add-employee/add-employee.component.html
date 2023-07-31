@@ -1,0 +1,77 @@
+<div class="container">
+    <h2>Add Employee</h2>
+    <form  (submit)="onSubmit()">
+ 
+      <!-- Dropdown for Users -->
+      <div class="form-group">
+        <label for="user">User:</label>
+        <select class="form-control" id="user" [(ngModel)]="employee.user" name="user" required>
+          <option value="0" disabled selected>Select a user</option>
+          <option *ngFor="let user of users" [value]="user.userId">{{ user.firstName }} {{ user.lastName }}</option>
+        </select>
+      </div>
+
+
+       <!-- Dropdown for Resources -->
+       <div class="form-group">
+        <label for="resource">Resource:</label>
+        <select class="form-control" id="resource" [(ngModel)]="employee.resource" name="resource" required>
+          <option value="0" disabled selected>Select a resource</option>
+          <option *ngFor="let resource of resources" [ngValue]="resource.resourceId">{{ resource.resourceName }}</option>
+        </select>
+      </div>
+ 
+      <!-- Dropdown for Employee Type -->
+      <div class="form-group">
+        <label for="employeetype">Employee Type:</label>
+        <select class="form-control" id="employeetype" [(ngModel)]="employee.employeetype" name="employeetype" required>
+          <option value="0" disabled selected>Select an employee type</option>
+          <option *ngFor="let type of employeeTypes" [ngValue]="type.employeeTypeId">{{ type.employeeTypeName }}</option>
+        </select>
+      </div>
+
+
+      <!-- Dropdown for Employee Status -->
+      <div class="form-group">
+        <label for="employeestatus">Employee Status:</label>
+        <select class="form-control" id="employeestatus" [(ngModel)]="employee.employeestatus" name="employeestatus" required>
+          <option value="0" disabled selected>Select an employee status</option>
+          <option *ngFor="let status of employeeStatuses" [ngValue]="status.employeeStatusId">{{ status.employeeStatusName }}</option>
+        </select>
+      </div>
+ 
+      <!-- Dropdown for Region -->
+      <div class="form-group">
+        <label for="region">Region:</label>
+        <select class="form-control" id="region" [(ngModel)]="employee.region" name="region" required>
+          <option value="0" disabled selected>Select a region</option>
+          <option *ngFor="let region of regions" [ngValue]="region.regionId">{{ region.regionName }}</option>
+        </select>
+      </div>
+ 
+      <!-- Dropdown for Division -->
+      <div class="form-group">
+        <label for="division">Division:</label>
+        <select class="form-control" id="division" [(ngModel)]="employee.division" name="division" required>
+          <option value="0" disabled selected>Select a division</option>
+          <option *ngFor="let division of divisions" [ngValue]="division.divisionId">{{ division.divisionName }}</option>
+        </select>
+      </div>
+ 
+      <!-- Dropdown for Manager Type -->
+      <div class="form-group">
+        <label for="managertype">Manager Type:</label>
+        <select class="form-control" id="managertype" [(ngModel)]="employee.managertype" name="managertype">
+          <option value="0" disabled selected>Select a manager type</option>
+          <option *ngFor="let managerType of managerTypes" [ngValue]="managerType.managerTypeId">{{ managerType.managerTypeName}}</option>
+        </select>
+      </div>
+
+
+      <button type="submit" class="btn btn-primary" [disabled]="!areDropdownsSelected()">Add Employee</button>
+      <button type="button" class="btn btn-sm btn-warning" (click)="cancel()">Cancel</button>
+    </form>
+  </div>
+
+
+

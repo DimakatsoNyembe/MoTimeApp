@@ -1,0 +1,43 @@
+<div class="email-user-container">
+    <h2 class="heading">Email Employee</h2>
+  
+  
+    <div class="table-container">
+      <table class="table">
+        <thead>
+          <tr class="table-heading-row">
+            <th class="table-heading">Select Employee</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employees">
+            <td class="table-cell-no-border">
+              <div class="employee-item">
+                <span>{{ employee.name }}</span>
+                <button (click)="selectEmployee(employee)">➔</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+  
+    <div class="selected-employee-heading">
+      <h3>Selected Employees</h3>
+    </div>
+  
+  
+    <div class="selected-employee-list">
+      <div *ngFor="let employee of selectedEmployees">
+        <div class="employee-item">
+          <span>{{ employee.name }}</span>
+          <button (click)="removeEmployee(employee)">➖</button>
+        </div>
+      </div>
+    </div>
+  
+  
+    <button class="launch-outlook-button" (click)="launchOutlook()">Send Email</button>
+  </div>
+  

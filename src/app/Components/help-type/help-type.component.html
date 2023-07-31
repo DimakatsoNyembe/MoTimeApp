@@ -1,0 +1,39 @@
+<h2 class="heading text-center">HELP TYPE</h2>
+
+<div class="actions">
+  <button type="button" class="btn btn-sm btn-primary add-button" routerLink="/help-type/add">
+    <i class="fas fa-plus"></i>
+  </button>
+  <div class="search-container">
+    <input type="text" [(ngModel)]="searchText" placeholder="Search...">
+    <button class="btn btn-sm btn-primary search-button" (click)="onSearch()">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+</div>
+
+
+
+
+<div class="table-container">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th scope="col" class="table-heading">Name</th>
+        <th scope="col" class="table-heading">Description</th>
+        <th scope="col" class="table-heading">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let helpType of helpTypes" class="table-row">
+        <td class="table-cell">{{ helpType.helpTypeName }}</td>
+        <td class="table-cell">{{ helpType.helpTypeDescription }}</td>
+        <td class="table-cell table-icons">
+          <i class="fas fa-edit edit-icon" (click)="editHelpType(helpType.helpTypeId)"></i>
+          <span class="divider"></span>
+          <i class="fas fa-trash delete-icon" (click)="deleteHelpType(helpType.helpTypeId)"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

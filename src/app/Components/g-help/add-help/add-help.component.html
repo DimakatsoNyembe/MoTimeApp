@@ -1,0 +1,55 @@
+<div class="heading">
+    <h1>Add Help</h1>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form class="form-horizontal" (submit)="onSubmit()">
+          <div class="form-group">
+            <label class="col-sm-2" for="helpName">Help Name:</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="helpName" name="helpName" placeholder="Enter name" [(ngModel)]="helpName" required>
+            </div>
+          </div>
+  
+  
+          <div class="form-group">
+            <label class="col-sm-2" for="helpDescription">Help Description:</label>
+            <div class="col-sm-10">
+              <textarea class="form-control" id="helpDescription" name="helpDescription" placeholder="Enter description" [(ngModel)]="helpDescription" required></textarea>
+            </div>
+          </div>
+  
+  
+          <div class="form-group">
+            <label class="col-sm-2" for="helpType">Help Type:</label>
+            <div class="col-sm-10">
+              <select class="form-control" id="helpType" name="helpType" [(ngModel)]="helpType" required>
+                <option value="0" disabled>Select Help Type</option>
+                <option *ngFor="let helpType of helpTypes" [value]="helpType.helpTypeId">
+                  {{ helpType.helpTypeName }}
+                </option>
+              </select>
+            </div>
+          </div>
+  
+  
+          <div class="form-group">
+            <label class="col-sm-2" for="material">Upload File:</label>
+            <div class="col-sm-10">
+              <input type="file" id="material" name="material" (change)="onFileChange($event)" required>
+            </div>
+          </div>
+  
+  
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" [disabled]="!helpType" class="btn btn-sm btn-primary">Submit</button>
+              <button type="button" class="btn btn-sm btn-primary" (click)="cancel()">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
